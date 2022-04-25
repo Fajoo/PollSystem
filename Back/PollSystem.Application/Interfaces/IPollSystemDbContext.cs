@@ -8,6 +8,11 @@ namespace PollSystem.Application.Interfaces;
 /// </summary>
 public interface IPollSystemDbContext
 {
-    DbSet<Person> People { get; set; }
+    DbSet<Question> Questions { get; set; }
+    DbSet<QuestionSettings> QuestionSettings { get; set; }
+    DbSet<Tag> Tags { get; set; }
+    DbSet<Category> Categories { get; set; }
+    DbSet<Option> Options { get; set; }
+    DbSet<Vote> Votes { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

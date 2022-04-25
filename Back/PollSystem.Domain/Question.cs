@@ -25,7 +25,7 @@ public class Question
     /// <summary>
     /// Question settings
     /// </summary>
-    public QuestionSettings Settings { get; set; }
+    public QuestionSettings QuestionSettings { get; set; }
     /// <summary>
     /// Category
     /// </summary>

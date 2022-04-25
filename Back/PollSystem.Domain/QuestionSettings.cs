@@ -18,4 +18,8 @@ public class QuestionSettings
     /// Question
     /// </summary>
     public Question Question { get; set; }
+    /// <summary>
+    /// Question id
+    /// </summary>
+    public Guid QuestionId { get; set; }
 }

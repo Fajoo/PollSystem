@@ -10,17 +10,19 @@ namespace PollSystem.Persistence;
 /// </summary>
 public class PollSystemDbContext : DbContext, IPollSystemDbContext
 {
-    /// <summary>
-    /// People table with data
-    /// </summary>
-    public DbSet<Person> People { get; set; }
+    public DbSet<Question> Questions { get; set; }
+    public DbSet<QuestionSettings> QuestionSettings { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Option> Options { get; set; }
+    public DbSet<Vote> Votes { get; set; }
 
     public PollSystemDbContext(DbContextOptions<PollSystemDbContext> options)
         : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.ApplyConfiguration(new PersonConfiguration());
+        builder.ApplyConfiguration(new QuestionConfigurator());
         base.OnModelCreating(builder);
     }
 }
