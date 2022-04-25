@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
+using PollSystem.Application.CQRS.Categories.Commands.CreateCategory;
 using PollSystem.Application.CQRS.Categories.Queries.GetAllCategories;
 
 namespace PollSystem.Api.Controllers;
@@ -28,12 +29,32 @@ public class CategoryController : BaseController
     /// <response code="401">If the user is unauthorized</response>
     [HttpGet]
     [Authorize]
-    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<CategoryListViewModel>> GetCategories()
     {
         var query = new GetAllCategoriesQuery();
         var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    /// <summary>
+    /// Description action
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
+    /// POST /person
+    /// </remarks>
+    /// <returns>Returns</returns>
+    /// <response code="201">Created</response>
+    /// <response code="401">If the user is unauthorized</response>
+    [HttpPost]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<CategoryListViewModel>> CreateCategory([FromBody] CreateCategoryCommand comm)
+    {
+        var vm = await Mediator.Send(comm);
         return Ok(vm);
     }
 }

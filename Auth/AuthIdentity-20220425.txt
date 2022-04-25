@@ -461,3 +461,128 @@ SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NO
 2022-04-25 18:50:43.575 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
 2022-04-25 18:50:43.584 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
 2022-04-25 18:50:43.644 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 69.1919ms
+2022-04-25 21:22:23.034 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:22:23.481 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:22:23.492 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:22:23.499 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-04-25 21:22:23.504 +03:00 [INF] Initialization DB done
+2022-04-25 21:22:23.602 +03:00 [INF] User profile is available. Using 'C:\Users\dimas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-25 21:22:23.894 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-04-25 21:22:23.928 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-04-25 21:22:23.954 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-04-25 21:22:24.468 +03:00 [INF] Now listening on: https://localhost:1001
+2022-04-25 21:22:24.570 +03:00 [INF] Now listening on: http://localhost:1000
+2022-04-25 21:22:24.572 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-25 21:22:24.573 +03:00 [INF] Hosting environment: Development
+2022-04-25 21:22:24.574 +03:00 [INF] Content root path: D:\src\PollSystem\Auth
+2022-04-25 21:22:27.867 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:22:27.953 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:22:28.041 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 177.2960ms
+2022-04-25 21:22:28.082 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:22:28.084 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:22:28.221 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 139.0968ms
+2022-04-25 21:22:29.019 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&nonce=tDAX81ws_wluuRLfPp-UYg&state=IQLNJZ12RJmVAC_K20rA_w&code_challenge=pacV3tHakuYvuWUxQ17sWkM5dRLYRl3e1A-9O86_YVk&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI&redirect_uri=http%3A%2F%2F127.0.0.1%3A23920%2F - -
+2022-04-25 21:22:29.046 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:22:29.381 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-04-25 21:22:29.491 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."ClaimType", "u"."ClaimValue", "u"."UserId"
+FROM "UserClaim" AS "u"
+WHERE "u"."UserId" = @__user_Id_0
+2022-04-25 21:22:29.514 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Name"
+FROM "UserRoles" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."UserId" = @__userId_0
+2022-04-25 21:22:29.660 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-04-25 21:22:29.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&nonce=tDAX81ws_wluuRLfPp-UYg&state=IQLNJZ12RJmVAC_K20rA_w&code_challenge=pacV3tHakuYvuWUxQ17sWkM5dRLYRl3e1A-9O86_YVk&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI&redirect_uri=http%3A%2F%2F127.0.0.1%3A23920%2F - - - 302 0 - 827.2958ms
+2022-04-25 21:22:29.985 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:22:29.987 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:22:29.992 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 7.4002ms
+2022-04-25 21:22:29.996 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:22:29.998 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:22:30.002 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.6493ms
+2022-04-25 21:22:30.173 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 222
+2022-04-25 21:22:30.177 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-04-25 21:22:30.249 +03:00 [INF] Token request validation success, {"ClientId":"wpf-app","ClientName":"Auth Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****EB93","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","code":"FCBCFC935A4A9AD30A7F6D45C2707B02C140B4754FC0D737A2FA4D2F4D1BEB93","redirect_uri":"http://127.0.0.1:23920/","code_verifier":"nMSd2A8GHf-mNqlBvw61L4KDr_LDhQCFkScYuqvMmmg","client_id":"wpf-app"},"$type":"TokenRequestValidationLog"}
+2022-04-25 21:22:30.352 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:22:30.357 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-04-25 21:22:30.562 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 222 - 200 - application/json;+charset=UTF-8 388.8822ms
+2022-04-25 21:22:30.590 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:22:30.601 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:22:30.604 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 14.5238ms
+2022-04-25 21:22:30.606 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:22:30.608 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:22:30.609 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.4021ms
+2022-04-25 21:22:30.617 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/connect/userinfo - -
+2022-04-25 21:22:30.618 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2022-04-25 21:22:30.688 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:22:30.694 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-04-25 21:22:30.697 +03:00 [INF] Profile service returned the following claim types: name
+2022-04-25 21:22:30.698 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/connect/userinfo - - - 200 - application/json;+charset=UTF-8 81.5611ms
+2022-04-25 21:26:02.689 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:26:02.999 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:26:03.010 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:26:03.018 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-04-25 21:26:03.024 +03:00 [INF] Initialization DB done
+2022-04-25 21:26:03.064 +03:00 [INF] User profile is available. Using 'C:\Users\dimas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-25 21:26:03.150 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-04-25 21:26:03.175 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-04-25 21:26:03.187 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-04-25 21:26:03.423 +03:00 [INF] Now listening on: https://localhost:1001
+2022-04-25 21:26:03.425 +03:00 [INF] Now listening on: http://localhost:1000
+2022-04-25 21:26:03.427 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-25 21:26:03.428 +03:00 [INF] Hosting environment: Development
+2022-04-25 21:26:03.429 +03:00 [INF] Content root path: D:\src\PollSystem\Auth
+2022-04-25 21:28:25.899 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-04-25 21:28:26.067 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:28:26.081 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-04-25 21:28:26.087 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-04-25 21:28:26.095 +03:00 [INF] Initialization DB done
+2022-04-25 21:28:26.143 +03:00 [INF] User profile is available. Using 'C:\Users\dimas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-04-25 21:28:26.229 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-04-25 21:28:26.243 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-04-25 21:28:26.253 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-04-25 21:28:26.473 +03:00 [INF] Now listening on: https://localhost:1001
+2022-04-25 21:28:26.474 +03:00 [INF] Now listening on: http://localhost:1000
+2022-04-25 21:28:26.475 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-25 21:28:26.476 +03:00 [INF] Hosting environment: Development
+2022-04-25 21:28:26.478 +03:00 [INF] Content root path: D:\src\PollSystem\Auth
+2022-04-25 21:28:55.179 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:28:55.307 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:28:55.365 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 188.3580ms
+2022-04-25 21:28:55.562 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:28:55.577 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:28:55.657 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 95.1583ms
+2022-04-25 21:32:27.020 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:32:27.035 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:32:27.049 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 29.1801ms
+2022-04-25 21:32:27.262 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:32:27.265 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:32:27.266 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.4256ms
+2022-04-25 21:35:55.586 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-04-25 21:35:55.598 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-04-25 21:35:55.600 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 14.0656ms
+2022-04-25 21:35:55.754 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-04-25 21:35:55.756 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-04-25 21:35:55.758 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.8296ms

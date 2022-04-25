@@ -10,7 +10,7 @@
     <Folder Include="Common\Mappings\" />
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Behaviors\" />
-    <Folder Include="CQRS\Categories\Commands\" />
+    <Folder Include="CQRS\Categories\Commands\CreateCategory\" />
     <Folder Include="CQRS\Categories\Queries\GetAllCategories\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
