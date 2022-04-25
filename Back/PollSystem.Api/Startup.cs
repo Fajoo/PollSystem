@@ -49,7 +49,7 @@ public class Startup
             })
             .AddJwtBearer("Bearer", options =>
             {
-                options.Authority = "https://localhost:44386/";
+                options.Authority = "https://localhost:1001/";
                 options.Audience = "PollSystemAPI";
                 options.RequireHttpsMetadata = false;
             });

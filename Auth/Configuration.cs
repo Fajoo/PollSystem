@@ -9,7 +9,7 @@ namespace Auth.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                new("TestWebAPI", "Web API")
+                new("PollSystemAPI", "Web API")
             };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -22,10 +22,10 @@ namespace Auth.Identity
         public static IEnumerable<ApiResource> ApiResources =>
             new List<ApiResource>
             {
-                new("TestWebAPI", "Web API", new []
+                new("PollSystemAPI", "Web API", new []
                     { JwtClaimTypes.Name})
                 {
-                    Scopes = {"TestWebAPI"}
+                    Scopes = { "PollSystemAPI" }
                 }
             };
 
@@ -46,7 +46,7 @@ namespace Auth.Identity
                     AlwaysIncludeUserClaimsInIdToken = true,
                     RedirectUris =
                     {
-                        "http://localhost/sample-wpf-app"
+                        "http://127.0.0.1:23920/"
                     },
                     AllowedCorsOrigins =
                     {
@@ -56,7 +56,7 @@ namespace Auth.Identity
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "TestWebAPI"
+                        "PollSystemAPI"
                     },
                     AllowAccessTokensViaBrowser = true,
                     AccessTokenLifetime = 3600,
