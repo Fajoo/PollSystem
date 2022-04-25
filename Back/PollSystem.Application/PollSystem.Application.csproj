@@ -11,7 +11,9 @@
     <Folder Include="Common\Exceptions\" />
     <Folder Include="Common\Behaviors\" />
     <Folder Include="CQRS\Categories\Commands\CreateCategory\" />
+    <Folder Include="CQRS\Categories\Commands\DeleteCategory\" />
     <Folder Include="CQRS\Categories\Queries\GetAllCategories\" />
+    <Folder Include="CQRS\Categories\Queries\GetCategory\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
 

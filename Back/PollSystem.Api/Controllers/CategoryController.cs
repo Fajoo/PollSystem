@@ -2,8 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
+using PollSystem.Api.Models;
 using PollSystem.Application.CQRS.Categories.Commands.CreateCategory;
+using PollSystem.Application.CQRS.Categories.Commands.DeleteCategory;
 using PollSystem.Application.CQRS.Categories.Queries.GetAllCategories;
+using PollSystem.Application.CQRS.Categories.Queries.GetCategory;
 
 namespace PollSystem.Api.Controllers;
 
@@ -24,7 +27,7 @@ public class CategoryController : BaseController
     /// Sample request:
     /// GET /person
     /// </remarks>
-    /// <returns>Returns</returns>
+    /// <returns>Returns CategoryListViewModel</returns>
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpGet]
@@ -43,18 +46,67 @@ public class CategoryController : BaseController
     /// </summary>
     /// <remarks>
     /// Sample request:
+    /// GET /
+    /// </remarks>
+    /// <returns>Return</returns>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
+    [HttpGet("{id}")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<CategoryDto>> GetCategory(Guid id)
+    {
+        var query = new GetCategoryQuery()
+        {
+            Id = id
+        };
+        var vm = await Mediator.Send(query);
+        return Ok(vm);
+    }
+
+    /// <summary>
+    /// Description action
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
     /// POST /person
     /// </remarks>
-    /// <returns>Returns</returns>
-    /// <response code="201">Created</response>
+    /// <returns>Return GUID</returns>
+    /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpPost]
     [Authorize]
-    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<CategoryListViewModel>> CreateCategory([FromBody] CreateCategoryCommand comm)
+    public async Task<ActionResult<CategoryListViewModel>> CreateCategory([FromBody] CreateCategoryModel model)
     {
-        var vm = await Mediator.Send(comm);
+        var command = _mapper.Map<CreateCategoryCommand>(model);
+        var vm = await Mediator.Send(command);
         return Ok(vm);
+    }
+
+    /// <summary>
+    /// Description action
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
+    /// Delete /
+    /// </remarks>
+    /// <returns>Returns</returns>
+    /// <response code="204">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
+    [HttpDelete("{id}")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult> DeleteCategory(Guid id)
+    {
+        var command = new DeleteCategoryCommand()
+        {
+            Id = id
+        };
+        var vm = await Mediator.Send(command);
+        return NoContent();
     }
 }
