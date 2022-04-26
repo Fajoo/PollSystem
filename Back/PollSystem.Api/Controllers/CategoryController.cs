@@ -30,7 +30,6 @@ public class CategoryController : BaseController
     /// <response code="200">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpGet]
-    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<CategoryListViewModel>> GetCategories()
