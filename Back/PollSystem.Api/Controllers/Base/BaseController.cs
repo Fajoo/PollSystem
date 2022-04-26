@@ -15,4 +15,8 @@ public abstract class BaseController : ControllerBase
     internal Guid UserId => !User.Identity.IsAuthenticated
         ? Guid.Empty
         : Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+    internal string UserLogin => !User.Identity.IsAuthenticated
+        ? string.Empty
+        : User.FindFirst(ClaimTypes.Name).Value;
 }

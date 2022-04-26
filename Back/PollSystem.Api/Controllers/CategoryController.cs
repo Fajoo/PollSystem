@@ -11,7 +11,6 @@ using PollSystem.Application.CQRS.Categories.Queries.GetCategory;
 namespace PollSystem.Api.Controllers;
 
 [ApiVersion("1.0")]
-[ApiVersion("2.0")]
 [Produces("application/json")]
 [Route("api/{version:apiVersion}/[controller]")]
 public class CategoryController : BaseController
