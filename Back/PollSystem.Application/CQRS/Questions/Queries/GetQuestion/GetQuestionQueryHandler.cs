@@ -34,7 +34,7 @@ public class GetQuestionQueryHandler : IRequestHandler<GetQuestionQuery, Questio
             Name = question.Name,
             Description = question.Description,
             LoginUser = question.LoginUser,
-            CreatDate = DateTime.Now,
+            CreateDate = DateTime.Now,
             Options = _mapper.Map<IEnumerable<OptionDto>>(options)
         };
     }

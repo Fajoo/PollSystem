@@ -18,7 +18,7 @@ public class CreateQuestionCommandHandler : IRequestHandler<CreateQuestionComman
         {
             Id = Guid.NewGuid(),
             LoginUser = request.LoginUser,
-            CreatDate = DateTime.Now,
+            CreateDate = DateTime.Now,
             Name = request.Name,
             Category = await _context.Categories.FindAsync(request.CategoryId)
         };

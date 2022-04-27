@@ -14,6 +14,8 @@
     <Folder Include="CQRS\Categories\Commands\DeleteCategory\" />
     <Folder Include="CQRS\Categories\Queries\GetAllCategories\" />
     <Folder Include="CQRS\Categories\Queries\GetCategory\" />
+    <Folder Include="CQRS\Comments\Commands\" />
+    <Folder Include="CQRS\Comments\Queries\" />
     <Folder Include="CQRS\Options\Commands\CreateOptionCommand\" />
     <Folder Include="CQRS\Options\Queries\" />
     <Folder Include="CQRS\Questions\Commands\CreateQuestion\" />

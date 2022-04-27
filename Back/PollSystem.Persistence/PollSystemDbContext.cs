@@ -16,6 +16,7 @@ public class PollSystemDbContext : DbContext, IPollSystemDbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<Option> Options { get; set; }
     public DbSet<Vote> Votes { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 
     public PollSystemDbContext(DbContextOptions<PollSystemDbContext> options)
         : base(options) { }

@@ -9,7 +9,7 @@ public class QuestionDto : IMapWith<Question>
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
-    public DateTime CreatDate { get; set; }
+    public DateTime CreateDate { get; set; }
 
     public void Mapping(Profile profile)
     {
@@ -18,7 +18,7 @@ public class QuestionDto : IMapWith<Question>
                 q => q.MapFrom(q => q.Name))
             .ForMember(q => q.Id,
                 q => q.MapFrom(q => q.Id))
-            .ForMember(q => q.CreatDate,
-                q => q.MapFrom(q => q.CreatDate));
+            .ForMember(q => q.CreateDate,
+                q => q.MapFrom(q => q.CreateDate));
     }
 }

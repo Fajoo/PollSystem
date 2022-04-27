@@ -6,6 +6,6 @@ public class QuestionDto
     public string LoginUser { get; set; }
     public string Name { get; set; }
     public string? Description { get; set; }
-    public DateTime CreatDate { get; set; }
+    public DateTime CreateDate { get; set; }
     public IEnumerable<OptionDto> Options { get; set; }
 }

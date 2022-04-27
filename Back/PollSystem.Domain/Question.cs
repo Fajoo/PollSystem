@@ -21,7 +21,7 @@ public class Question
     /// <summary>
     /// Date of creation
     /// </summary>
-    public DateTime CreatDate { get; set; }
+    public DateTime CreateDate { get; set; }
     /// <summary>
     /// Question settings
     /// </summary>
@@ -38,5 +38,9 @@ public class Question
     /// List of tags
     /// </summary>
     public List<Tag> Tags { get; set; } = new();
+    /// <summary>
+    /// List of comments
+    /// </summary>
+    public List<Comment> Comments { get; set; } = new();
 
 }

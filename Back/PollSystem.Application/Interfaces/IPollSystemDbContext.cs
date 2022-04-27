@@ -14,5 +14,6 @@ public interface IPollSystemDbContext
     DbSet<Category> Categories { get; set; }
     DbSet<Option> Options { get; set; }
     DbSet<Vote> Votes { get; set; }
+    DbSet<Comment> Comments { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

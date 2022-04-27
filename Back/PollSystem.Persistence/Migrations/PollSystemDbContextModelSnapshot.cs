@@ -38,6 +38,33 @@ namespace PollSystem.Persistence.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("PollSystem.Domain.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserLogin")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("PollSystem.Domain.Option", b =>
                 {
                     b.Property<Guid>("Id")
@@ -67,7 +94,7 @@ namespace PollSystem.Persistence.Migrations
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("CreatDate")
+                    b.Property<DateTime>("CreateDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
@@ -164,6 +191,17 @@ namespace PollSystem.Persistence.Migrations
                     b.ToTable("QuestionTag");
                 });
 
+            modelBuilder.Entity("PollSystem.Domain.Comment", b =>
+                {
+                    b.HasOne("PollSystem.Domain.Question", "Question")
+                        .WithMany("Comments")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+                });
+
             modelBuilder.Entity("PollSystem.Domain.Option", b =>
                 {
                     b.HasOne("PollSystem.Domain.Question", "Question")
@@ -235,6 +273,8 @@ namespace PollSystem.Persistence.Migrations
 
             modelBuilder.Entity("PollSystem.Domain.Question", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("Options");
 
                     b.Navigation("QuestionSettings")
