@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PollSystem.Application.Interfaces;
 using PollSystem.Domain;
 
-namespace PollSystem.Application.CQRS.Votes.Commands.CreateVoteCommand;
+namespace PollSystem.Application.CQRS.Votes.Commands.CreateVote;
 
 public class CreateVoteCommandHandler : IRequestHandler<CreateVoteCommand, Guid>
 {

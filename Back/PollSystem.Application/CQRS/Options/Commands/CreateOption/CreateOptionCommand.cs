@@ -1,7 +1,6 @@
 ﻿using MediatR;
-using PollSystem.Domain;
 
-namespace PollSystem.Application.CQRS.Options.Commands.CreateOptionCommand;
+namespace PollSystem.Application.CQRS.Options.Commands.CreateOption;
 
 public class CreateOptionCommand : IRequest<Guid>
 {

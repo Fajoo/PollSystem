@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
-using PollSystem.Application.CQRS.Votes.Commands.CreateVoteCommand;
+using PollSystem.Application.CQRS.Votes.Commands.CreateVote;
 
 namespace PollSystem.Api.Controllers;
 

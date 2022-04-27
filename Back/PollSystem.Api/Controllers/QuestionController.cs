@@ -81,9 +81,11 @@ public class QuestionController : BaseController
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<Guid>> CreateQuestion([FromBody] CreateQuestionCommand model)
+    public async Task<ActionResult<Guid>> CreateQuestion([FromBody] CreateCategoryModel model)
     {
-        var res = Mediator.Send(model);
+        var command = _mapper.Map<CreateQuestionCommand>(model);
+        command.LoginUser = UserLogin;
+        var res = Mediator.Send(command);
         return Ok(res);
     }
 }

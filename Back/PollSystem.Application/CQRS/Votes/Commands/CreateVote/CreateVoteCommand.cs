@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace PollSystem.Application.CQRS.Votes.Commands.CreateVoteCommand;
+namespace PollSystem.Application.CQRS.Votes.Commands.CreateVote;
 
 public class CreateVoteCommand : IRequest<Guid>
 {

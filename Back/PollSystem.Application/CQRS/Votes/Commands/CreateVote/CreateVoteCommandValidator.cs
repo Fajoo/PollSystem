@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace PollSystem.Application.CQRS.Votes.Commands.CreateVoteCommand;
+namespace PollSystem.Application.CQRS.Votes.Commands.CreateVote;
 
 public class CreateVoteCommandValidator : AbstractValidator<CreateVoteCommand>
 {

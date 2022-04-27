@@ -1,4 +1,4 @@
-﻿namespace PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions;
+﻿namespace PollSystem.Application.CQRS;
 
 public class Page
 {

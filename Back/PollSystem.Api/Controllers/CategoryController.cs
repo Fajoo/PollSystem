@@ -5,6 +5,7 @@ using PollSystem.Api.Controllers.Base;
 using PollSystem.Api.Models;
 using PollSystem.Application.CQRS.Categories.Commands.CreateCategory;
 using PollSystem.Application.CQRS.Categories.Commands.DeleteCategory;
+using PollSystem.Application.CQRS.Categories.Queries;
 using PollSystem.Application.CQRS.Categories.Queries.GetAllCategories;
 using PollSystem.Application.CQRS.Categories.Queries.GetCategory;
 

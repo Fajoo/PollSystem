@@ -2,7 +2,7 @@
 using PollSystem.Application.Common.Mappings;
 using PollSystem.Domain;
 
-namespace PollSystem.Application.CQRS.Categories.Queries.GetAllCategories;
+namespace PollSystem.Application.CQRS.Categories.Queries;
 
 public class CategoryDto : IMapWith<Category>
 {

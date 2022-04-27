@@ -2,7 +2,7 @@
 using PollSystem.Application.Interfaces;
 using PollSystem.Domain;
 
-namespace PollSystem.Application.CQRS.Options.Commands.CreateOptionCommand;
+namespace PollSystem.Application.CQRS.Options.Commands.CreateOption;
 
 public class CreateOptionCommandHandler : IRequestHandler<CreateOptionCommand, Guid>
 {
