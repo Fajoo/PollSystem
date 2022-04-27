@@ -1,20 +1,15 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
-using PollSystem.Application.CQRS.Votes.Commands.CreateVoteCommand;
+using PollSystem.Application.CQRS.Options.Commands.CreateOptionCommand;
 
 namespace PollSystem.Api.Controllers;
 
 [ApiVersion("1.0")]
 [Produces("application/json")]
 [Route("api/{version:apiVersion}/[controller]")]
-public class VoteController : BaseController
+public class OptionController : BaseController
 {
-    private readonly IMapper _mapper;
-
-    public VoteController(IMapper mapper) => _mapper = mapper;
-
     /// <summary>
     /// Description action
     /// </summary>
@@ -26,16 +21,11 @@ public class VoteController : BaseController
     /// <response code="201">Success</response>
     /// <response code="401">If the user is unauthorized</response>
     [HttpPost]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    public async Task<ActionResult<Guid>> CreateVote([FromBody] Guid id)
+    public async Task<ActionResult> CreateOption([FromBody]CreateOptionCommand model)
     {
-        var model = new CreateVoteCommand
-        {
-            OptionId = id,
-            UserLogin = UserLogin
-        };
         var result = Mediator.Send(model);
         return Ok(result);
     }

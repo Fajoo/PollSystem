@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using PollSystem.Application.Interfaces;
 using PollSystem.Domain;
 
@@ -15,9 +16,15 @@ public class CreateVoteCommandHandler : IRequestHandler<CreateVoteCommand, Guid>
 
     public async Task<Guid> Handle(CreateVoteCommand request, CancellationToken cancellationToken)
     {
-        var option = await _context.Options.FindAsync(request.OptionId);
+        var option = await _context.Options
+            .Include(o => o.Votes)
+            .FirstOrDefaultAsync(o => o.Id == request.OptionId, cancellationToken);
+
         if (option is null)
             throw new Exception("not found");
+        if (option.Votes.FirstOrDefault(v => v.UserLogin == request.UserLogin) is not null)
+            throw new Exception("already voted");
+
         var vote = new Vote
         {
             Id = Guid.NewGuid(),

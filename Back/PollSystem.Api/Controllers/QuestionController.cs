@@ -6,6 +6,8 @@ using PollSystem.Api.Controllers.Base;
 using PollSystem.Api.Models;
 using PollSystem.Application.CQRS.Questions.Commands.CreateQuestion;
 using PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions;
+using PollSystem.Application.CQRS.Questions.Queries.GetQuestion;
+using QuestionDto = PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions.QuestionDto;
 
 namespace PollSystem.Api.Controllers;
 
@@ -40,6 +42,30 @@ public class QuestionController : BaseController
         };
         var res = Mediator.Send(query);
         return Ok(res);
+    }
+
+    /// <summary>
+    /// Description action
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
+    /// GET /
+    /// </remarks>
+    /// <returns>Returns</returns>
+    /// <response code="200">Success</response>
+    /// <response code="401">If the user is unauthorized</response>
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    public async Task<ActionResult<QuestionDto>> GetQuestion(Guid id)
+    {
+        var query = new GetQuestionQuery
+        {
+            QuestionId = id
+        };
+        var result = Mediator.Send(query);
+
+        return Ok(result);
     }
 
     /// <summary>
