@@ -15,6 +15,9 @@
     <Folder Include="CQRS\Categories\Queries\GetAllCategories\" />
     <Folder Include="CQRS\Categories\Queries\GetCategory\" />
     <Folder Include="CQRS\Questions\Commands\CreateQuestion\" />
+    <Folder Include="CQRS\Votes\Commands\CreateVoteCommand\" />
+    <Folder Include="CQRS\Votes\Queries\" />
+    <Folder Include="CQRS\Options\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
 
