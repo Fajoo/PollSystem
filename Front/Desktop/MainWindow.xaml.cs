@@ -1,8 +1,6 @@
-﻿using System.Windows;
+﻿namespace Desktop;
 
-namespace Desktop;
-
-public partial class MainWindow : Window
+public partial class MainWindow
 {
     public MainWindow() => InitializeComponent();
 }
