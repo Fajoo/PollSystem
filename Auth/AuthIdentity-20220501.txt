@@ -1,0 +1,94 @@
+2022-05-01 00:29:34.245 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 00:29:34.906 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-05-01 00:29:34.922 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2022-05-01 00:29:34.932 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-05-01 00:29:34.940 +03:00 [INF] Initialization DB done
+2022-05-01 00:29:35.007 +03:00 [INF] User profile is available. Using 'C:\Users\dimas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-01 00:29:35.230 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-05-01 00:29:35.251 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-05-01 00:29:35.262 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-05-01 00:29:35.630 +03:00 [INF] Now listening on: https://localhost:1001
+2022-05-01 00:29:35.631 +03:00 [INF] Now listening on: http://localhost:1000
+2022-05-01 00:29:35.633 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-01 00:29:35.634 +03:00 [INF] Hosting environment: Development
+2022-05-01 00:29:35.636 +03:00 [INF] Content root path: D:\src\PollSystem\Auth
+2022-05-01 00:41:44.156 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:41:44.365 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:41:44.487 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 338.1299ms
+2022-05-01 00:42:34.079 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:42:34.112 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:42:34.131 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 52.5487ms
+2022-05-01 00:42:34.177 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:42:34.190 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:42:34.267 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 90.6227ms
+2022-05-01 00:43:05.415 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:43:05.433 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:43:05.436 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 20.4550ms
+2022-05-01 00:43:05.459 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:43:05.462 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:43:05.464 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.0113ms
+2022-05-01 00:43:53.032 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:43:53.062 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:43:53.067 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 34.4889ms
+2022-05-01 00:43:53.094 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:43:53.151 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:43:53.187 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 92.8134ms
+2022-05-01 00:44:55.282 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:44:55.297 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:44:55.301 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 18.6331ms
+2022-05-01 00:44:55.369 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:44:55.415 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:44:55.421 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 52.2713ms
+2022-05-01 00:47:46.460 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:47:46.462 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:47:46.464 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 3.7673ms
+2022-05-01 00:47:46.489 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:47:46.491 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:47:46.493 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.3661ms
+2022-05-01 00:50:09.278 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:50:09.288 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:50:09.293 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 14.9997ms
+2022-05-01 00:50:09.344 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:50:09.346 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:50:09.348 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.1147ms
+2022-05-01 00:51:05.362 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:51:05.364 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:51:05.367 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 4.6051ms
+2022-05-01 00:51:05.386 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:51:05.388 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:51:05.390 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.9645ms
+2022-05-01 00:51:11.822 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=cVenVQwVMhLbY99WQJvlng&code_challenge=pAap_6Uid7EE0PvV9YKPBOJZnjWJxIWHEnAf8KjRedQ&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 00:51:11.892 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-05-01 00:51:12.155 +03:00 [INF] Showing login: User is not authenticated
+2022-05-01 00:51:12.169 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=cVenVQwVMhLbY99WQJvlng&code_challenge=pAap_6Uid7EE0PvV9YKPBOJZnjWJxIWHEnAf8KjRedQ&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 346.8139ms
+2022-05-01 00:51:12.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DcVenVQwVMhLbY99WQJvlng%26code_challenge%3DpAap_6Uid7EE0PvV9YKPBOJZnjWJxIWHEnAf8KjRedQ%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - -
+2022-05-01 00:51:12.179 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 00:51:12.206 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 00:51:12.248 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 00:51:12.420 +03:00 [INF] Executed ViewResult - view Login executed in 174.3031ms.
+2022-05-01 00:51:12.423 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 213.8638ms
+2022-05-01 00:51:12.427 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 00:51:12.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DcVenVQwVMhLbY99WQJvlng%26code_challenge%3DpAap_6Uid7EE0PvV9YKPBOJZnjWJxIWHEnAf8KjRedQ%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - - - 200 - text/html;+charset=utf-8 259.5233ms
+2022-05-01 00:51:12.511 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/favicon.ico - -
+2022-05-01 00:51:12.521 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/favicon.ico - - - 404 0 - 9.5341ms
+2022-05-01 00:55:04.993 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:55:04.995 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:55:04.999 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 5.7277ms
+2022-05-01 00:55:05.022 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:55:05.023 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:55:05.026 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.7846ms
+2022-05-01 00:57:25.269 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:57:25.271 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:57:25.274 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 5.1047ms
+2022-05-01 00:57:25.298 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:57:25.300 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:57:25.303 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.1763ms
+2022-05-01 00:57:58.181 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 00:57:58.183 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 00:57:58.185 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 3.7869ms
+2022-05-01 00:57:58.209 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 00:57:58.211 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 00:57:58.215 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.8654ms

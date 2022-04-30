@@ -36,6 +36,7 @@ public class AuthService
         {
             var result = await _client.LoginAsync();
             await _hub.ConnectAsync(result.AccessToken);
+            _configuration["token"] = result.AccessToken;
             return result;
         }
         catch (Exception ex)
