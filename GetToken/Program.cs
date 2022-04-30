@@ -42,7 +42,7 @@ namespace ConsoleClientWithBrowser
                 Authority = _authority,
                 ClientId = "wpf-app",
                 RedirectUri = redirectUri,
-                Scope = "openid profile PollSystemAPI",
+                Scope = "openid profile PollSystemAPI offline_access",
                 FilterClaims = false,
                 Browser = browser,
             };

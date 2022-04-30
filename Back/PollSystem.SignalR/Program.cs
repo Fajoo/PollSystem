@@ -16,10 +16,15 @@ builder.Services.AddCors(op =>
             .AllowAnyHeader();
     });
 });
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+builder.Services.AddAuthentication(config =>
     {
-        options.Authority = "https://localhost:44386/";
+        config.DefaultAuthenticateScheme =
+            JwtBearerDefaults.AuthenticationScheme;
+        config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = "https://localhost:1001/";
         options.Audience = "PollSystem.SignalR";
         options.RequireHttpsMetadata = false;
 
@@ -39,11 +44,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
-app.UseRouting();
+//app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("PollSystem.SignalRCors");
-app.MapGet("/notification", () => "Use SignalR");
+//app.MapGet("/notification", () => "Use SignalR");
 app.MapHub<NotificationHub>("/notification");
 
 app.Run();

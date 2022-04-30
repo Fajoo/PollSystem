@@ -12,7 +12,6 @@ namespace Desktop;
 public partial class App : Application
 {
     public static Window? ActivedWindow => Current.Windows.Cast<Window>().FirstOrDefault(w => w.IsActive);
-
     public static Window? FocusedWindow => Current.Windows.Cast<Window>().FirstOrDefault(w => w.IsFocused);
 
     private static IHost __Host;
@@ -27,12 +26,14 @@ public partial class App : Application
         .Build();
 
     public static IServiceProvider Services => Host.Services;
-
     protected override async void OnStartup(StartupEventArgs e)
     {
         var host = Host;
         base.OnStartup(e);
         await host.StartAsync();
+
+        var configuration = Services.GetService<AuthService>();
+        var keka = await configuration.LoginAsync();
     }
 
     protected override async void OnExit(ExitEventArgs e)

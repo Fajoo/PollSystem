@@ -9,7 +9,8 @@ namespace Auth.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new List<ApiScope>
             {
-                new("PollSystemAPI", "Web API")
+                new("PollSystemAPI", "Web API"),
+                new("PollSystem.SignalR", "SignalR")
             };
 
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -26,6 +27,11 @@ namespace Auth.Identity
                     { JwtClaimTypes.Name})
                 {
                     Scopes = { "PollSystemAPI" }
+                },
+                new("PollSystem.SignalR", "SignalR", new []
+                    { JwtClaimTypes.Name})
+                {
+                    Scopes = { "PollSystem.SignalR" }
                 }
             };
 
@@ -39,14 +45,11 @@ namespace Auth.Identity
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
                     RequirePkce = true,
-                    //Страница с подтверждениями прав доступа
                     RequireConsent = false,
-                    // Включить в Id Token клаимы с токена доступа
-                    // Второй способ на клиенте получить через config.GetClaimsFromUserInfoEndpoint
                     AlwaysIncludeUserClaimsInIdToken = true,
                     RedirectUris =
                     {
-                        "http://127.0.0.1:23920/"
+                        "http://127.0.0.1/sample-wpf-app"
                     },
                     AllowedCorsOrigins =
                     {
@@ -56,11 +59,12 @@ namespace Auth.Identity
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "PollSystemAPI"
+                        "PollSystemAPI",
+                        "PollSystem.SignalR"
                     },
+                    AbsoluteRefreshTokenLifetime = 10,
                     AllowAccessTokensViaBrowser = true,
                     AccessTokenLifetime = 3600,
-                    // Для Refresh Token
                     AllowOfflineAccess = true
                 }
             };

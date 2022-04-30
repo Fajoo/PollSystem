@@ -10,13 +10,24 @@
   <ItemGroup>
     <PackageReference Include="HandyControl.Lang.ru" Version="3.3.0" />
     <PackageReference Include="HandyControls" Version="3.3.11" />
+    <PackageReference Include="IdentityModel.OidcClient" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="6.0.4" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1185.39" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\Img\" />
     <Folder Include="Models\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
