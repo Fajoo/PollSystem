@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Img\pollIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HandyControl.Lang.ru" Version="3.3.0" />
     <PackageReference Include="HandyControls" Version="3.3.11" />
     <PackageReference Include="IdentityModel.OidcClient" Version="5.0.0" />
@@ -21,13 +25,42 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Img\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Img\pollIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Data.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Data.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\DataApp.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataApp.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Data.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\DataApp.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>DataApp.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

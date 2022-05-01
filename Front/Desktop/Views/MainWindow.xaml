@@ -6,9 +6,128 @@
         xmlns:local="clr-namespace:Desktop"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
+        WindowStyle="None"
+        Topmost="True"
+        Name="MainWin"
         WindowStartupLocation="CenterScreen"
-        Title="{Binding Tittle}" Height="450" Width="800"
+        Title="{Binding Tittle}" Height="650" Width="1000"
         DataContext="{Binding MainWindowModel, Source={StaticResource Locator}}">
     <Grid>
+        <hc:Interaction.Triggers>
+            <hc:EventTrigger EventName="Loaded">
+                <hc:EventToCommand Command="{Binding LoadFilesCommand}" PassEventArgsToCommand="True"/>
+            </hc:EventTrigger>
+        </hc:Interaction.Triggers>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--****************************Menu****************************-->
+        <Grid Row="0" 
+              Column="0"
+              hc:WindowAttach.IsDragElement="True"
+              Background="{DynamicResource DarkMaskBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="✔UPoll"
+                       Padding="10,5"
+                       Foreground="#f5c542"
+                       VerticalAlignment="Center"
+                       FontFamily="Bahnschrift SemiBold SemiCondensed"
+                       FontSize="23"/>
+            <ContentControl Grid.Column="1"
+                            HorizontalAlignment="Stretch">
+                <hc:Interaction.Triggers>
+                    <hc:EventTrigger EventName="MouseDoubleClick">
+                        <hc:EventToCommand Command="{StaticResource MinMaxWindowCommand}" 
+                                           PassEventArgsToCommand="True"/>
+                    </hc:EventTrigger>
+                </hc:Interaction.Triggers>
+                <TextBlock></TextBlock>
+            </ContentControl>
+            <StackPanel Grid.Column="1"
+                            Orientation="Horizontal"
+                            Margin="10,5"
+                            HorizontalAlignment="Left" Cursor="Hand">
+                    <StackPanel.Resources>
+                        <Style TargetType="StackPanel">
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="15,0"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Orientation" Value="Horizontal"/>
+                        </Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="19"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Style>
+                        <Style TargetType="Image">
+                            <Setter Property="Width" Value="24"/>
+                            <Setter Property="Height" Value="24"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="2,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <StackPanel>
+                        <Image Source="../Resources/Img/pollIcon.png"/>
+                        <TextBlock Text="Voting"
+                                   Foreground="#f5c542"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Top-100"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="Create"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="2"
+                            Orientation="Horizontal">
+                <Button Content="Login" 
+                        Style="{StaticResource ButtonWarning}" 
+                        FontWeight="Bold"
+                        Width="80"
+                        Margin="10,0"
+                        FontSize="14"/>
+                <Button Style="{StaticResource ButtonIcon}" 
+                        hc:IconElement.Geometry="{StaticResource WindowMinGeometry}" 
+                        Command="SystemCommands.MinimizeWindowCommand"/>
+                <Button Command="{StaticResource MinMaxWindowCommand}">
+                    <Button.Style>
+                        <Style TargetType="Button" 
+                               BasedOn="{StaticResource ButtonIcon}">
+                            <Setter Property="hc:IconElement.Geometry" 
+                                    Value="{StaticResource WindowMaxGeometry}"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=MainWin,Path=WindowState}" 
+                                             Value="Maximized">
+                                    <Setter Property="hc:IconElement.Geometry" 
+                                            Value="{StaticResource WindowRestoreGeometry}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button hc:IconElement.Geometry="{StaticResource CloseGeometry}"
+                        Command="SystemCommands.CloseWindowCommand">
+                    <Button.Style>
+                        <Style TargetType="Button" 
+                               BasedOn="{StaticResource ButtonIcon}" >
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" 
+                                         Value="True">
+                                    <Setter Property="Background" 
+                                            Value="Red"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <!--****************************Menu****************************-->
     </Grid>
 </hc:Window>

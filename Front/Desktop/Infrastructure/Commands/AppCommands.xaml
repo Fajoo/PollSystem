@@ -3,5 +3,6 @@
                     xmlns:commands="clr-namespace:Desktop.Infrastructure.Commands">
     
     <commands:CloseWindow x:Key="CloseWindowCommand"/>
+    <commands:MinMaxWindow x:Key="MinMaxWindowCommand"/>
 
 </ResourceDictionary>

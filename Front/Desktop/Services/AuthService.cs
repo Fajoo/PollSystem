@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Desktop.Infrastructure;
+using Desktop.Resources;
 using Desktop.Services.Interfaces;
 using HandyControl.Controls;
 using IdentityModel.OidcClient;
@@ -36,7 +37,8 @@ public class AuthService
         {
             var result = await _client.LoginAsync();
             await _hub.ConnectAsync(result.AccessToken);
-            _configuration["token"] = result.AccessToken;
+            DataApp.Default.AccessToken = result.AccessToken;
+            DataApp.Default.Save();
             return result;
         }
         catch (Exception ex)

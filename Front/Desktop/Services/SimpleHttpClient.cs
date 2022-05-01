@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Desktop.Models;
+using Desktop.Resources;
 using Microsoft.Extensions.Configuration;
 
 namespace Desktop.Services;
@@ -19,7 +20,13 @@ public class SimpleHttpClient
         _configuration = configuration;
         //!ToDo Get token
         _client.DefaultRequestHeaders.Authorization =
-            new AuthenticationHeaderValue("Bearer", _configuration["token"]);
+            new AuthenticationHeaderValue("Bearer", DataApp.Default.AccessToken);
+    }
+
+    public void UpdateToken()
+    {
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", DataApp.Default.AccessToken);
     }
 
     public async Task<ApiResult<T>> GetAsync<T>(string url)

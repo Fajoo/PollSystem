@@ -92,3 +92,401 @@ SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NO
 2022-05-01 00:57:58.209 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
 2022-05-01 00:57:58.211 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
 2022-05-01 00:57:58.215 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.8654ms
+2022-05-01 01:40:05.443 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:40:05.462 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:40:05.466 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 25.4276ms
+2022-05-01 01:40:05.489 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:40:05.492 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:40:05.496 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.2806ms
+2022-05-01 01:40:09.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=C9n_35k9QMonhBGbt9dL1A&code_challenge=gM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 01:40:09.377 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-05-01 01:40:09.398 +03:00 [INF] Showing login: User is not authenticated
+2022-05-01 01:40:09.403 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=C9n_35k9QMonhBGbt9dL1A&code_challenge=gM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 48.7712ms
+2022-05-01 01:40:09.410 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DC9n_35k9QMonhBGbt9dL1A%26code_challenge%3DgM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - -
+2022-05-01 01:40:09.426 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:09.430 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 01:40:09.445 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 01:40:09.456 +03:00 [INF] Executed ViewResult - view Login executed in 17.423ms.
+2022-05-01 01:40:09.458 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 25.302ms
+2022-05-01 01:40:09.460 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:09.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DC9n_35k9QMonhBGbt9dL1A%26code_challenge%3DgM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - - - 200 - text/html;+charset=utf-8 50.9446ms
+2022-05-01 01:40:09.731 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/favicon.ico - -
+2022-05-01 01:40:09.824 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/favicon.ico - - - 404 0 - 92.2231ms
+2022-05-01 01:40:14.100 +03:00 [INF] Request starting HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 589
+2022-05-01 01:40:14.109 +03:00 [INF] No CORS policy found for the specified request.
+2022-05-01 01:40:14.111 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:14.132 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Identity.ViewModel.LoginViewModel) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 01:40:14.203 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:40:14.686 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:40:14.838 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:40:14.924 +03:00 [WRN] Invalid password for user.
+2022-05-01 01:40:14.927 +03:00 [WRN] User failed to provide the correct password.
+2022-05-01 01:40:14.928 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 01:40:14.931 +03:00 [INF] Executed ViewResult - view Login executed in 3.5504ms.
+2022-05-01 01:40:14.933 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 793.8393ms
+2022-05-01 01:40:14.936 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:14.941 +03:00 [INF] Request finished HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 589 - 200 - text/html;+charset=utf-8 841.6498ms
+2022-05-01 01:40:18.876 +03:00 [INF] Request starting HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590
+2022-05-01 01:40:18.878 +03:00 [INF] No CORS policy found for the specified request.
+2022-05-01 01:40:18.880 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:18.882 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Identity.ViewModel.LoginViewModel) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 01:40:18.938 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:40:18.944 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:40:18.949 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:40:19.015 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."ClaimType", "u"."ClaimValue", "u"."UserId"
+FROM "UserClaim" AS "u"
+WHERE "u"."UserId" = @__user_Id_0
+2022-05-01 01:40:19.102 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Name"
+FROM "UserRoles" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."UserId" = @__userId_0
+2022-05-01 01:40:19.127 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 01:40:19.129 +03:00 [INF] Executing RedirectResult, redirecting to /connect/authorize/callback?response_type=code&state=C9n_35k9QMonhBGbt9dL1A&code_challenge=gM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app.
+2022-05-01 01:40:19.131 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 246.072ms
+2022-05-01 01:40:19.132 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:40:19.134 +03:00 [INF] Request finished HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590 - 302 0 - 258.2658ms
+2022-05-01 01:40:19.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=C9n_35k9QMonhBGbt9dL1A&code_challenge=gM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 01:40:19.142 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-05-01 01:40:19.284 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 01:40:19.288 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=C9n_35k9QMonhBGbt9dL1A&code_challenge=gM54ZN1riyAmAqwN7IERT_T8AD4nHRL9_FOml6m3Lbo&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 150.9501ms
+2022-05-01 01:40:19.417 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:40:19.420 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:40:19.424 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 6.9998ms
+2022-05-01 01:40:19.427 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:40:19.429 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:40:19.431 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.7908ms
+2022-05-01 01:40:19.451 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228
+2022-05-01 01:40:19.454 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-05-01 01:40:19.540 +03:00 [INF] Token request validation success, {"ClientId":"wpf-app","ClientName":"Auth Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****985C","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","code":"16361508634C5E91E29F73A4BDFC53E6E343C7CB4F52A673BD96BBE6CE8E985C","redirect_uri":"http://127.0.0.1/sample-wpf-app","code_verifier":"vERbP682BPshNBXFbn-tNbFq4anIpjTDqAq3EwzaNDQ","client_id":"wpf-app"},"$type":"TokenRequestValidationLog"}
+2022-05-01 01:40:19.601 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:40:19.615 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 01:40:19.752 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228 - 200 - application/json;+charset=UTF-8 301.6988ms
+2022-05-01 01:40:19.778 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:40:19.779 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:40:19.780 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 2.7166ms
+2022-05-01 01:40:19.782 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:40:19.783 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:40:19.784 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 2.6061ms
+2022-05-01 01:40:19.792 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/connect/userinfo - -
+2022-05-01 01:40:19.795 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2022-05-01 01:40:19.850 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:40:19.856 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 01:40:19.860 +03:00 [INF] Profile service returned the following claim types: name
+2022-05-01 01:40:19.864 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/connect/userinfo - - - 200 - application/json;+charset=UTF-8 71.2587ms
+2022-05-01 01:40:21.036 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:40:21.040 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:40:21.043 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 6.9928ms
+2022-05-01 01:40:21.260 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:40:21.261 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:40:21.263 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.7263ms
+2022-05-01 01:42:32.333 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:42:32.335 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:42:32.338 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 4.8026ms
+2022-05-01 01:42:32.359 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:42:32.361 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:42:32.363 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.4149ms
+2022-05-01 01:42:34.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=STyZGUg5poqcoK3Ysz1Qlw&code_challenge=LpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 01:42:34.114 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-05-01 01:42:34.116 +03:00 [INF] Showing login: User is not authenticated
+2022-05-01 01:42:34.118 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=STyZGUg5poqcoK3Ysz1Qlw&code_challenge=LpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 15.5679ms
+2022-05-01 01:42:34.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DSTyZGUg5poqcoK3Ysz1Qlw%26code_challenge%3DLpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - -
+2022-05-01 01:42:34.133 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:42:34.135 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 01:42:34.138 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 01:42:34.141 +03:00 [INF] Executed ViewResult - view Login executed in 2.9661ms.
+2022-05-01 01:42:34.143 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 5.362ms
+2022-05-01 01:42:34.149 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:42:34.154 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DSTyZGUg5poqcoK3Ysz1Qlw%26code_challenge%3DLpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - - - 200 - text/html;+charset=utf-8 30.0982ms
+2022-05-01 01:42:34.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/favicon.ico - -
+2022-05-01 01:42:34.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/favicon.ico - - - 404 0 - 2.9742ms
+2022-05-01 01:42:38.970 +03:00 [INF] Request starting HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590
+2022-05-01 01:42:38.973 +03:00 [INF] No CORS policy found for the specified request.
+2022-05-01 01:42:38.974 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:42:38.975 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Identity.ViewModel.LoginViewModel) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 01:42:38.981 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:42:38.986 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:42:38.989 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 01:42:39.000 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."ClaimType", "u"."ClaimValue", "u"."UserId"
+FROM "UserClaim" AS "u"
+WHERE "u"."UserId" = @__user_Id_0
+2022-05-01 01:42:39.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Name"
+FROM "UserRoles" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."UserId" = @__userId_0
+2022-05-01 01:42:39.010 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 01:42:39.011 +03:00 [INF] Executing RedirectResult, redirecting to /connect/authorize/callback?response_type=code&state=STyZGUg5poqcoK3Ysz1Qlw&code_challenge=LpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app.
+2022-05-01 01:42:39.013 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 33.8664ms
+2022-05-01 01:42:39.014 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 01:42:39.015 +03:00 [INF] Request finished HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590 - 302 0 - 45.1407ms
+2022-05-01 01:42:39.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=STyZGUg5poqcoK3Ysz1Qlw&code_challenge=LpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 01:42:39.020 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-05-01 01:42:39.022 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 01:42:39.024 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=STyZGUg5poqcoK3Ysz1Qlw&code_challenge=LpN_HyPwLw1mSisrE-DtxGMblb1WTP4MngDl4-6-dnM&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 6.2950ms
+2022-05-01 01:42:39.105 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:42:39.107 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:42:39.119 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 14.6450ms
+2022-05-01 01:42:39.123 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:42:39.125 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:42:39.126 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.5654ms
+2022-05-01 01:42:39.150 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228
+2022-05-01 01:42:39.152 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-05-01 01:42:39.154 +03:00 [INF] Token request validation success, {"ClientId":"wpf-app","ClientName":"Auth Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****422D","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","code":"1518D383B881C99E79E5FFB324A5299421BDEA58A9F5DE2F89202B516729422D","redirect_uri":"http://127.0.0.1/sample-wpf-app","code_verifier":"kiOmQFW5fAPn7sV80CdMVPCBthGdZL5bgyZHqV13xwY","client_id":"wpf-app"},"$type":"TokenRequestValidationLog"}
+2022-05-01 01:42:39.166 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:42:39.169 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 01:42:39.175 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228 - 200 - application/json;+charset=UTF-8 24.4387ms
+2022-05-01 01:42:39.205 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:42:39.206 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:42:39.209 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 3.8775ms
+2022-05-01 01:42:39.210 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:42:39.211 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:42:39.214 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.5992ms
+2022-05-01 01:42:39.224 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/connect/userinfo - -
+2022-05-01 01:42:39.225 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2022-05-01 01:42:39.227 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 01:42:39.229 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 01:42:39.232 +03:00 [INF] Profile service returned the following claim types: name
+2022-05-01 01:42:39.233 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/connect/userinfo - - - 200 - application/json;+charset=UTF-8 9.3098ms
+2022-05-01 01:43:12.191 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:43:12.193 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:43:12.196 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 4.5874ms
+2022-05-01 01:43:12.225 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:43:12.227 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:43:12.228 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 2.9695ms
+2022-05-01 01:43:12.659 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 01:43:12.686 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 01:43:12.698 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 39.1167ms
+2022-05-01 01:43:13.288 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 01:43:13.290 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 01:43:13.293 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.9391ms
+2022-05-01 02:12:38.593 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:12:38.598 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:12:38.603 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 10.3220ms
+2022-05-01 02:12:38.640 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:12:38.647 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:12:38.651 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 11.2607ms
+2022-05-01 02:13:59.653 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:13:59.658 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:13:59.662 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 8.8950ms
+2022-05-01 02:13:59.687 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:13:59.689 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:13:59.691 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 4.2826ms
+2022-05-01 02:14:04.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=ovFJg54fXSyVlFUQRy6kWg&code_challenge=mpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 02:14:04.652 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-05-01 02:14:04.656 +03:00 [INF] Showing login: User is not authenticated
+2022-05-01 02:14:04.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=ovFJg54fXSyVlFUQRy6kWg&code_challenge=mpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 10.0429ms
+2022-05-01 02:14:04.663 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DovFJg54fXSyVlFUQRy6kWg%26code_challenge%3DmpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - -
+2022-05-01 02:14:04.677 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:14:04.680 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 02:14:04.698 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 02:14:04.702 +03:00 [INF] Executed ViewResult - view Login executed in 12.2048ms.
+2022-05-01 02:14:04.703 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 14.7393ms
+2022-05-01 02:14:04.718 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:14:04.725 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DovFJg54fXSyVlFUQRy6kWg%26code_challenge%3DmpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - - - 200 - text/html;+charset=utf-8 61.9330ms
+2022-05-01 02:14:04.784 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/favicon.ico - -
+2022-05-01 02:14:04.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/favicon.ico - - - 404 0 - 1.3157ms
+2022-05-01 02:14:11.081 +03:00 [INF] Request starting HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590
+2022-05-01 02:14:11.083 +03:00 [INF] No CORS policy found for the specified request.
+2022-05-01 02:14:11.085 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:14:11.089 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Identity.ViewModel.LoginViewModel) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 02:14:11.098 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:14:11.221 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 02:14:11.230 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 02:14:11.242 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."ClaimType", "u"."ClaimValue", "u"."UserId"
+FROM "UserClaim" AS "u"
+WHERE "u"."UserId" = @__user_Id_0
+2022-05-01 02:14:11.250 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Name"
+FROM "UserRoles" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."UserId" = @__userId_0
+2022-05-01 02:14:11.258 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 02:14:11.260 +03:00 [INF] Executing RedirectResult, redirecting to /connect/authorize/callback?response_type=code&state=ovFJg54fXSyVlFUQRy6kWg&code_challenge=mpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app.
+2022-05-01 02:14:11.264 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 168.671ms
+2022-05-01 02:14:11.266 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:14:11.271 +03:00 [INF] Request finished HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590 - 302 0 - 190.6037ms
+2022-05-01 02:14:11.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=ovFJg54fXSyVlFUQRy6kWg&code_challenge=mpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 02:14:11.285 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-05-01 02:14:11.289 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 02:14:11.291 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=ovFJg54fXSyVlFUQRy6kWg&code_challenge=mpxNvaAI8EbYQUnNHfSnGyAxu4S7RQuZJwZh7lRBjZc&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 17.5417ms
+2022-05-01 02:14:11.407 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:14:11.409 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:14:11.413 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 6.1212ms
+2022-05-01 02:14:11.416 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:14:11.417 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:14:11.420 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.6560ms
+2022-05-01 02:14:11.448 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228
+2022-05-01 02:14:11.463 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-05-01 02:14:11.470 +03:00 [INF] Token request validation success, {"ClientId":"wpf-app","ClientName":"Auth Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****5A03","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","code":"A6ED510057632FA10E19A558D38F5B0AABFB59DCA2142646F3DF8672277D5A03","redirect_uri":"http://127.0.0.1/sample-wpf-app","code_verifier":"5RHDOUAfz2j8kuUTfJ11wEqZknInwZxgSiNgZjazkOI","client_id":"wpf-app"},"$type":"TokenRequestValidationLog"}
+2022-05-01 02:14:11.489 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:14:11.493 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 02:14:11.505 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228 - 200 - application/json;+charset=UTF-8 57.4844ms
+2022-05-01 02:14:11.544 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:14:11.551 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:14:11.553 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 8.6056ms
+2022-05-01 02:14:11.554 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:14:11.556 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:14:11.560 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 5.6101ms
+2022-05-01 02:14:11.569 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/connect/userinfo - -
+2022-05-01 02:14:11.572 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2022-05-01 02:14:11.575 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:14:11.580 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 02:14:11.584 +03:00 [INF] Profile service returned the following claim types: name
+2022-05-01 02:14:11.586 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/connect/userinfo - - - 200 - application/json;+charset=UTF-8 16.3919ms
+2022-05-01 02:14:12.744 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:14:12.746 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:14:12.749 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 4.9606ms
+2022-05-01 02:14:13.004 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:14:13.006 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:14:13.011 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 6.0081ms
+2022-05-01 02:16:17.444 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:16:17.446 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:16:17.448 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 3.9216ms
+2022-05-01 02:16:17.480 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:16:17.481 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:16:17.483 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.5913ms
+2022-05-01 02:16:17.901 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:16:17.902 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:16:17.905 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 4.1849ms
+2022-05-01 02:16:18.204 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:16:18.206 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:16:18.207 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.1515ms
+2022-05-01 02:16:22.811 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=tSqQUcz9swnHeqPzu1CJIQ&code_challenge=4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 02:16:22.815 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-05-01 02:16:22.817 +03:00 [INF] Showing login: User is not authenticated
+2022-05-01 02:16:22.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize?response_type=code&state=tSqQUcz9swnHeqPzu1CJIQ&code_challenge=4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 7.9796ms
+2022-05-01 02:16:22.823 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DtSqQUcz9swnHeqPzu1CJIQ%26code_challenge%3D4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - -
+2022-05-01 02:16:22.827 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:16:22.828 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 02:16:22.836 +03:00 [INF] Executing ViewResult, running view Login.
+2022-05-01 02:16:22.839 +03:00 [INF] Executed ViewResult - view Login executed in 2.987ms.
+2022-05-01 02:16:22.844 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 8.3217ms
+2022-05-01 02:16:22.865 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:16:22.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/Auth/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26state%3DtSqQUcz9swnHeqPzu1CJIQ%26code_challenge%3D4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA%26code_challenge_method%3DS256%26client_id%3Dwpf-app%26scope%3Dopenid%2520profile%2520PollSystemAPI%2520PollSystem.SignalR%2520offline_access%26redirect_uri%3Dhttp%253A%252F%252F127.0.0.1%252Fsample-wpf-app - - - 200 - text/html;+charset=utf-8 44.4678ms
+2022-05-01 02:16:22.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/favicon.ico - -
+2022-05-01 02:16:22.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/favicon.ico - - - 404 0 - 4.2378ms
+2022-05-01 02:16:27.573 +03:00 [INF] Request starting HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590
+2022-05-01 02:16:27.577 +03:00 [INF] No CORS policy found for the specified request.
+2022-05-01 02:16:27.579 +03:00 [INF] Executing endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:16:27.583 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth.Identity.ViewModel.LoginViewModel) on controller Auth.Identity.Controllers.AuthController (Auth.Identity).
+2022-05-01 02:16:27.588 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:16:27.595 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 02:16:27.599 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-05-01 02:16:27.613 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."ClaimType", "u"."ClaimValue", "u"."UserId"
+FROM "UserClaim" AS "u"
+WHERE "u"."UserId" = @__user_Id_0
+2022-05-01 02:16:27.621 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "r"."Name"
+FROM "UserRoles" AS "u"
+INNER JOIN "Roles" AS "r" ON "u"."RoleId" = "r"."Id"
+WHERE "u"."UserId" = @__userId_0
+2022-05-01 02:16:27.627 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 02:16:27.629 +03:00 [INF] Executing RedirectResult, redirecting to /connect/authorize/callback?response_type=code&state=tSqQUcz9swnHeqPzu1CJIQ&code_challenge=4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app.
+2022-05-01 02:16:27.637 +03:00 [INF] Executed action Auth.Identity.Controllers.AuthController.Login (Auth.Identity) in 50.4538ms
+2022-05-01 02:16:27.639 +03:00 [INF] Executed endpoint 'Auth.Identity.Controllers.AuthController.Login (Auth.Identity)'
+2022-05-01 02:16:27.640 +03:00 [INF] Request finished HTTP/2 POST https://localhost:1001/Auth/Login application/x-www-form-urlencoded 590 - 302 0 - 67.8600ms
+2022-05-01 02:16:27.645 +03:00 [INF] Request starting HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=tSqQUcz9swnHeqPzu1CJIQ&code_challenge=4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - -
+2022-05-01 02:16:27.648 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-05-01 02:16:27.654 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-05-01 02:16:27.656 +03:00 [INF] Request finished HTTP/2 GET https://localhost:1001/connect/authorize/callback?response_type=code&state=tSqQUcz9swnHeqPzu1CJIQ&code_challenge=4wqasKR4P_JvAHNyB_RvXmgUde5PfDj0LMmoFkeaSZA&code_challenge_method=S256&client_id=wpf-app&scope=openid%20profile%20PollSystemAPI%20PollSystem.SignalR%20offline_access&redirect_uri=http%3A%2F%2F127.0.0.1%2Fsample-wpf-app - - - 302 0 - 11.2450ms
+2022-05-01 02:16:27.773 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:16:27.776 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:16:27.779 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 6.5467ms
+2022-05-01 02:16:27.781 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:16:27.782 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:16:27.784 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 2.5116ms
+2022-05-01 02:16:27.810 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228
+2022-05-01 02:16:27.812 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-05-01 02:16:27.814 +03:00 [INF] Token request validation success, {"ClientId":"wpf-app","ClientName":"Auth Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****14EE","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"authorization_code","code":"DC32994A41B038A1A9ACD2913DB10E5373E5A37848AD053781A02E5BAA6914EE","redirect_uri":"http://127.0.0.1/sample-wpf-app","code_verifier":"gMXoaYBtMMRsU4f40zjuFFUZUQ78jCJdF4I1fgA-WLY","client_id":"wpf-app"},"$type":"TokenRequestValidationLog"}
+2022-05-01 02:16:27.833 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:16:27.839 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 02:16:27.845 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:1001/connect/token application/x-www-form-urlencoded 228 - 200 - application/json;+charset=UTF-8 35.6631ms
+2022-05-01 02:16:27.933 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - -
+2022-05-01 02:16:27.947 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-05-01 02:16:27.949 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration - - - 200 - application/json;+charset=UTF-8 15.3678ms
+2022-05-01 02:16:27.950 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - -
+2022-05-01 02:16:27.952 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2022-05-01 02:16:27.954 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/.well-known/openid-configuration/jwks - - - 200 - application/json;+charset=UTF-8 3.5219ms
+2022-05-01 02:16:27.966 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:1001/connect/userinfo - -
+2022-05-01 02:16:27.967 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2022-05-01 02:16:27.969 +03:00 [INF] Entity Framework Core 6.0.1 initialized 'AuthDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.1' with options: None
+2022-05-01 02:16:27.974 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."AccessFailedCount", "u"."ConcurrencyStamp", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."LastName", "u"."LockoutEnabled", "u"."LockoutEnd", "u"."NormalizedEmail", "u"."NormalizedUserName", "u"."PasswordHash", "u"."PhoneNumber", "u"."PhoneNumberConfirmed", "u"."SecurityStamp", "u"."TwoFactorEnabled", "u"."UserName"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__p_0
+LIMIT 1
+2022-05-01 02:16:27.979 +03:00 [INF] Profile service returned the following claim types: name
+2022-05-01 02:16:27.980 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:1001/connect/userinfo - - - 200 - application/json;+charset=UTF-8 14.3252ms
