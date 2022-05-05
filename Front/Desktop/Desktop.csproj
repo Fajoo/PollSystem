@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Img\allicon.png" />
     <None Remove="Resources\Img\pollIcon.png" />
   </ItemGroup>
 
@@ -29,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Img\allicon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Img\pollIcon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
