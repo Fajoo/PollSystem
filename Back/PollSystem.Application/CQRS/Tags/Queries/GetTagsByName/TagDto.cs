@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using PollSystem.Application.Common.Mappings;
-using PollSystem.Application.CQRS.Tags.Commands.RemoveTag;
 using PollSystem.Domain;
 
 namespace PollSystem.Application.CQRS.Tags.Queries.GetTagsByName;

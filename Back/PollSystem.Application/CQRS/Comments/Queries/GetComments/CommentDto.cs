@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using PollSystem.Application.Common.Mappings;
-using PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions;
 using PollSystem.Domain;
 
 namespace PollSystem.Application.CQRS.Comments.Queries.GetComments;

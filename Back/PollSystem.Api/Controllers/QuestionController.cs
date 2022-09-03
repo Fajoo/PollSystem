@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices.ComTypes;
-using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
 using PollSystem.Api.Models;

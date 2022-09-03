@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:models="clr-namespace:Desktop.Models"
         mc:Ignorable="d"
         WindowStyle="None"
         Topmost="True"
@@ -170,5 +171,26 @@
             </WrapPanel>
         </Grid>
         <!--****************************Categories****************************-->
+        <!--****************************Questions*****************************-->
+        <Grid Grid.Row="3">
+            <hc:TransitioningContentControl>
+                <Grid Margin="32">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <hc:Pagination MaxPageCount="{Binding Page.Count}" 
+                                   PageIndex="{Binding Page.CurrentPage}" 
+                                   IsJumpEnabled="True">
+                        <!--<hc:Interaction.Triggers>
+                            <hc:EventTrigger EventName="PageUpdated">
+                                <hc:EventToCommand Command="{Binding PageUpdatedCmd}" PassEventArgsToCommand="True" />
+                            </hc:EventTrigger>
+                        </hc:Interaction.Triggers>-->
+                    </hc:Pagination>
+                </Grid>
+            </hc:TransitioningContentControl>
+        </Grid>
+        <!--****************************Questions*****************************-->
     </Grid>
 </hc:Window>

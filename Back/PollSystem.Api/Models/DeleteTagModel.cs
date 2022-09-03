@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using PollSystem.Application.Common.Mappings;
-using PollSystem.Application.CQRS.Categories.Commands.CreateCategory;
 using PollSystem.Application.CQRS.Tags.Commands.RemoveTag;
 
 namespace PollSystem.Api.Models;

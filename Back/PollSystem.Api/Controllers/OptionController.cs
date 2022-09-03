@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PollSystem.Api.Controllers.Base;
 using PollSystem.Application.CQRS.Options.Commands.CreateOption;
 

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using PollSystem.Application.Common.Mappings;
 using PollSystem.Application.CQRS.Comments.Commands.CreateComment;
-using PollSystem.Application.CQRS.Questions.Commands.CreateQuestion;
 
 namespace PollSystem.Api.Models;
 

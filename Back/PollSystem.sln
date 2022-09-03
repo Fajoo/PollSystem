@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{DA658258
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollSystem.Utils", "PollSystem.Utils\PollSystem.Utils.csproj", "{8360BD73-A624-4A47-A01F-CE20C4BC1014}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollSystem.SignalR", "PollSystem.SignalR\PollSystem.SignalR.csproj", "{00F4439F-879D-41AD-BFC5-626FCBA81DE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollSystem.SignalR", "PollSystem.SignalR\PollSystem.SignalR.csproj", "{00F4439F-879D-41AD-BFC5-626FCBA81DE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

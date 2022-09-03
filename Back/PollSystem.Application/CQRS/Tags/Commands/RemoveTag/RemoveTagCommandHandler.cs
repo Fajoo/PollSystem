@@ -1,8 +1,6 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using PollSystem.Application.CQRS.Tags.Commands.RemoveTag;
 using PollSystem.Application.Interfaces;
-using PollSystem.Domain;
 
 namespace PollSystem.Application.CQRS.Tags.Commands.RemoveTag;
 

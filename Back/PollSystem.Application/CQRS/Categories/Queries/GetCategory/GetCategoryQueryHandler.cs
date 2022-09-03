@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using PollSystem.Application.CQRS.Categories.Queries.GetAllCategories;
 using PollSystem.Application.Interfaces;
 
 namespace PollSystem.Application.CQRS.Categories.Queries.GetCategory;

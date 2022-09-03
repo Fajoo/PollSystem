@@ -13,6 +13,16 @@ public class MainWindowViewModel : TittledViewModel
 {
     private readonly SimpleHttpClient _client;
 
+    #region Page : Page - Page
+
+    /// <summary>Page</summary>
+    private Page _page = new();
+
+    /// <summary>Page</summary>
+    public Page Page { get => _page; set => Set(ref _page, value); }
+
+    #endregion
+
     public MainWindowViewModel(SimpleHttpClient client)
     {
         _client = client;

@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using PollSystem.Application.Common.Mappings;
 using PollSystem.Application.CQRS.Questions.Commands.CreateQuestion;
-using PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions;
-using PollSystem.Domain;
 
 namespace PollSystem.Api.Models;
 

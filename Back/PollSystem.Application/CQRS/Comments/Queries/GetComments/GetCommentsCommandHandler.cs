@@ -2,7 +2,6 @@
 using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using PollSystem.Application.CQRS.Questions.Queries.GetAllQuestions;
 using PollSystem.Application.Interfaces;
 
 namespace PollSystem.Application.CQRS.Comments.Queries.GetComments;
