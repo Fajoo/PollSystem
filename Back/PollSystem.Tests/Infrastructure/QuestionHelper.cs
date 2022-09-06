@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoFixture;
 using PollSystem.Domain;
 
@@ -7,27 +8,27 @@ namespace PollSystem.Tests.Infrastructure;
 
 public static class QuestionHelper
 {
-    public static IEnumerable<Question> GetQuestions()
+    private static readonly string[] _guids =
+    {
+        "9a142869-612b-46e4-98bc-ede15ed2cbad",
+        "fc2740f2-3f3b-45a0-a83d-08ff923eaf0a",
+        "aebd6530-1901-4a21-8f2e-887f043f3308",
+        "4e9d1e7a-e868-4998-bfdd-6bc45ee7f3d3",
+        "2e96c1f9-47f6-4fa6-b962-612a8068b7c1"
+    };
+
+    public static IEnumerable<Question> GetQuestions(List<Domain.Category> categories)
     {
         var fixture = new Fixture();
-        
-        return new List<Question>
-        {
-            fixture.Build<Question>()
-                .With(q => q.Id, Guid.Parse("29a31c2a-5e77-4334-88b5-f0b16c5b83e6"))
-                .Create(),
-            fixture.Build<Question>()
-                .With(q => q.Id, Guid.Parse("dbd26353-6a48-4733-9fef-9bdc6d3fea6c"))
-                .Create(),
-            fixture.Build<Question>()
-                .With(q => q.Id, Guid.Parse("45390ebd-c0f8-4b7e-b55d-cbeeef88b3d8"))
-                .Create(),
-            fixture.Build<Question>()
-                .With(q => q.Id, Guid.Parse("e2cc195e-23e2-4893-a45a-7dc460628c71"))
-                .Create(),
-            fixture.Build<Question>()
-                .With(q => q.Id, Guid.Parse("b725add7-073f-4f88-8029-546241897b58"))
-                .Create()
-        };
+
+        return _guids.Select((t, i) => fixture.Build<Question>()
+                .With(q => q.Id, Guid.Parse(t))
+                .With(q => q.Category, categories[i])
+                .Without(q => q.Comments)
+                .Without(q => q.Options)
+                .Without(q => q.Tags)
+                .Without(q => q.QuestionSettings)
+                .Create())
+            .ToList();
     }
 }

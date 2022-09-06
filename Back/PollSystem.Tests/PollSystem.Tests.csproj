@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Infrastructure\" />
     <Folder Include="Category\" />
+    <Folder Include="Questions\" />
   </ItemGroup>
 
   <ItemGroup>

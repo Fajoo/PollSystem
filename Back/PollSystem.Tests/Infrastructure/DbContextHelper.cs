@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using PollSystem.Persistence;
 
@@ -15,7 +16,10 @@ public class DbContextHelper
         var context = new PollSystemDbContext(options);
         context.Database.EnsureCreated();
 
-        context.Categories.AddRange(CategoryHelper.GetCategories());
+        var categories = CategoryHelper.GetCategories();
+
+        context.Categories.AddRange(categories);
+        context.Questions.AddRange(QuestionHelper.GetQuestions(categories.ToList()));
 
         context.SaveChanges();
         return context;
